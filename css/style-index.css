@@ -1,0 +1,131 @@
+*{
+	margin:0;
+	padding: 0;
+}
+
+body{
+	background: rgb(44,49,54);
+	font-size: 1.6rem;
+  	font-family: "Open Sans", sans-serif;
+}
+
+#wrapper
+{
+	width: 1050px;
+	margin: 0 auto;
+}
+
+header
+{
+	margin: 0 auto;
+	height: 0.05em;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	text-align: center;
+	background-color: rgb(49,49,54);
+	color:white;
+}
+
+.menu-fixed{
+	margin: 0;
+	position: fixed;
+	top:0em;
+	width: 100%;
+	height: 7%;
+	background-color: rgb(62,69,76);
+}
+
+.menu-tags{
+	color: rgb(49,49,54);
+}
+
+.menu-links{
+	margin-top: 15px;
+	display: block;
+	float: left;
+	color:#f2f2f2;
+	text-decoration: none;
+	font-size: 17px;
+	margin-left: 12px;
+	padding: 5px 25px 5px 25px; 
+
+}
+.banner-img{
+	width: 100%;
+	background-size: cover;
+	
+}
+.blur{
+	background-color: rgb(44,49,54);
+}
+
+#btnLogin{
+	float: right;
+	margin-right: 30px;
+	border-radius: 15px;
+}
+
+article
+{
+	box-sizing: border-box;
+	float:left;
+	height: 100%;
+	background-color: grey;
+	padding: 0;
+	text-align: center;
+	height: 400px;
+}
+
+	.col-index
+	{
+	background-color: #91C9E8;
+	width: 100%;
+	padding: 0;
+	border: 1px solid #000;
+	}
+
+	.card
+	{
+	background-color: #D1D1D1;
+	width: 50%;
+	}
+
+@media screen and (max-width: 960px){
+
+	#wrapper
+	{
+		width: 80%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 640px){
+
+	#wrapper
+	{
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 480px){
+
+#wrapper
+	{
+		width: 100%;
+		margin: 0 auto;
+	}
+	.col-index
+	{
+	width: 100%;
+	}
+	.card
+	{
+	width: 100%;
+	}
+
+	header
+	{
+	width:100%;
+	}
+}
