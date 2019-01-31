@@ -1,0 +1,11 @@
+{
+  "name": "red_social",
+  "version": "1.0.0",
+  "description": "Proyecto de estadia Red Social para empresas",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Oscar Raygoza",
+  "license": "ISC"
+}
