@@ -8,3 +8,19 @@ function scrollMenuFixed() {
     document.getElementById("menu-fixed").className = "menu-fixed";
     
 }
+
+
+var toggleMenu = document.getElementById("toggle-menu");
+
+        toggleMenu.addEventListener('click',()=>{
+          toggleMenu.classList.toggle('nav-is-visible');
+        });
+
+
+
+
+
+
+
+
+
