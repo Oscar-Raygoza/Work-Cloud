@@ -142,8 +142,19 @@ article
 
 	.card
 	{
-		background-color: rgba(0, 0, 0, 0.842);
+		background-color: rgba(33, 36, 61, 0.37);
 		width: 50%;
+		color: #fff;
+	}.card-title{
+		
+	}.img-card-index{
+		width: 250px;
+		float: left;
+	}.p-card-index{
+		margin-right: 10px;
+		margin-left: 30px;
+		margin-top: 100px;
+		font-size: 16px;
 	}
 	
 	.footer{
@@ -186,6 +197,7 @@ article
 	.card
 	{
 		width: 100%;
+		
 	}
 
 	header

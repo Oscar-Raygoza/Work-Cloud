@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+  <defs>
+    <style>
+      .cls-1 {fill: #fbfaf9;}
+      .cls-2 {fill: url(#linear-gradient);}
+      .cls-3 {fill: #494948;}
+      .cls-4 {fill: #047870;}
+      .cls-5 {fill: #1dca7f;}
+      .cls-6 {fill: #6898ae;}
+      .cls-7 {fill: url(#New_Gradient_Swatch_copy_2);}
+      .cls-8 {fill: url(#New_Gradient_Swatch);}
+      .cls-9 {fill: url(#linear-gradient-2);}
+      .cls-10 {fill: url(#New_Gradient_Swatch_copy_3);}
+
+      @keyframes bar1 {
+        to {
+          transform: scale(1, 0.2);
+        }
+      }
+      .bar1 {
+        animation: bar1 4000ms ease-in-out alternate infinite;
+        transform-origin: 0 63.92px;
+      }
+      @keyframes bar2 {
+        to {
+          transform: scale(1, 4);
+        }
+      }
+      .bar2 {
+        animation: bar2 4000ms ease-in-out alternate infinite;
+        transform-origin: 0 63.92px;
+      }
+
+      @keyframes dots {
+        from {
+          transform: translateX(10px);
+        }
+      }
+      .dots {
+        animation: dots 6000ms ease-in-out -5000ms alternate infinite;
+      }
+
+      @keyframes eye {
+        0%, 50% {
+          transform: none;
+        }
+        10% {
+          transform: translate(-2px, 0);
+        }
+        20% {
+          transform: translate(1px, -1px);
+        }
+        40% {
+          transform: translate(1px, 1px);
+        }
+      }
+      .eye {
+        animation: eye 5000ms ease-in-out -1000ms infinite;
+      }
+
+      @keyframes pie1 {
+        to {
+          transform: rotate(-22.5deg);
+        }
+      }
+      .pie1 {
+        animation: pie1 3000ms ease-in-out alternate infinite;
+        transform-origin: 163.05px 157.17px;
+      }
+      @keyframes pie2 {
+        to {
+          transform: rotate(22.5deg);
+        }
+      }
+      .pie2 {
+        animation: pie2 3000ms ease-in-out alternate infinite;
+        transform-origin: 163.05px 157.17px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="154.35" y1="82.08" x2="154.35" y2="232.03" gradientTransform="translate(308.7 314.1) rotate(-180)"
+      gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#666665" />
+      <stop offset="0.4" stop-color="#636362" />
+      <stop offset="0.72" stop-color="#595958" />
+      <stop offset="1" stop-color="#494948" />
+    </linearGradient>
+    <linearGradient id="New_Gradient_Swatch_copy_2" x1="84.76" y1="204.9" x2="116.56" y2="236.69" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1dc97f" />
+      <stop offset="1" stop-color="#047870" />
+    </linearGradient>
+    <linearGradient id="New_Gradient_Swatch" x1="120.6" y1="178.28" x2="192.86" y2="178.28" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#047870" />
+      <stop offset="0.37" stop-color="#126b69" />
+      <stop offset="1" stop-color="#344c57" />
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="130.18" y1="129.22" x2="166.93" y2="150.44" xlink:href="#New_Gradient_Swatch_copy_2"
+    />
+    <linearGradient id="New_Gradient_Swatch_copy_3" x1="163.05" y1="172.08" x2="205.25" y2="172.08" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6897ad" />
+      <stop offset="1" stop-color="#344c57" />
+    </linearGradient>
+  </defs>
+  
+  <g class="dots">
+    <ellipse class="cls-1" cx="24.52" cy="158.89" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="24.52" cy="168.07" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="24.52" cy="177.25" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="44" cy="158.89" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="44" cy="168.07" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="44" cy="177.25" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="34.26" cy="158.89" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="34.26" cy="168.07" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="34.26" cy="177.25" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="63.48" cy="158.89" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="63.48" cy="168.07" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="63.48" cy="177.25" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="53.74" cy="158.89" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="53.74" cy="168.07" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="53.74" cy="177.25" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="82.96" cy="158.89" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="82.96" cy="168.07" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="82.96" cy="177.25" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="73.22" cy="158.89" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="73.22" cy="168.07" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="73.22" cy="177.25" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="102.44" cy="158.89" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="102.44" cy="168.07" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="102.44" cy="177.25" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="92.7" cy="158.89" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="92.7" cy="168.07" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="92.7" cy="177.25" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="121.92" cy="158.89" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="121.92" cy="168.07" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="121.92" cy="177.25" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="112.18" cy="158.89" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="112.18" cy="168.07" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="112.18" cy="177.25" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="141.4" cy="158.89" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="141.4" cy="168.07" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="141.4" cy="177.25" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="131.66" cy="158.89" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="131.66" cy="168.07" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="131.66" cy="177.25" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="160.88" cy="158.89" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="160.88" cy="168.07" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="160.88" cy="177.25" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="151.14" cy="158.89" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="151.14" cy="168.07" rx="1.62" ry="1.53" />
+    <ellipse class="cls-1" cx="151.14" cy="177.25" rx="1.62" ry="1.53" />
+  </g>
+
+  <rect class="cls-2" x="71.6" y="82.08" width="165.5" height="149.95" rx="4.24" ry="4.24" transform="translate(308.7 314.1) rotate(180)"
+  />
+  <path class="cls-3" d="M-1.21,142.06h150a0,0,0,0,1,0,0v25.71a4.28,4.28,0,0,1-4.28,4.28H3.07a4.28,4.28,0,0,1-4.28-4.28V142.06A0,0,0,0,1-1.21,142.06Z"
+    transform="translate(230.81 83.29) rotate(90)" />
+    
+  <circle class="cls-1" cx="183.55" cy="135.89" r="2.19" />
+  <path class="cls-1" d="M183.55,75.39a19.34,19.34,0,1,1,19.34-19.34A19.36,19.36,0,0,1,183.55,75.39Zm0-37.43a18.09,18.09,0,1,0,18.09,18.09A18.11,18.11,0,0,0,183.55,38Z"
+  />
+
+  <rect class="cls-4 bar1" x="175.22" y="47.27" width="4.16" height="16.65" />
+  <rect class="cls-5" x="181.46" y="54.21" width="4.16" height="9.72" />
+  <rect class="cls-6 bar2" x="187.71" y="59.76" width="4.16" height="4.16" />
+
+  <rect class="cls-1" x="182.92" y="75.11" width="1.26" height="54.09" />
+  <path class="cls-1" d="M190.91,143.26H176.18V128.53h14.73ZM177.43,142h12.22V129.78H177.43Z" />
+
+  <path class="cls-7" d="M100.66,243.29a22.49,22.49,0,1,1,22.49-22.49A22.52,22.52,0,0,1,100.66,243.29Zm0-42.84A20.35,20.35,0,1,0,121,220.8,20.37,20.37,0,0,0,100.66,200.45Z" />
+  <path class="cls-1" d="M112.29,220.8s-5.21,6.89-11.63,6.89S89,220.8,89,220.8s5.21-6.89,11.63-6.89S112.29,220.8,112.29,220.8Z" />
+  <circle class="cls-4 eye" cx="100.66" cy="220.8" r="3.78" />
+
+  <path class="cls-8" d="M192.86,187a42.37,42.37,0,0,1-69.31-14.33s0,0,0,0c-.42-1.08-.78-2.16-1.15-3.29-.15-.56-.32-1.13-.47-1.72l-.37-1.55a37.6,37.6,0,0,1-.74-4.71,39.32,39.32,0,0,1-.22-4.2h42.45Z"
+  />
+  <path class="cls-9 pie1" d="M163,114.72v42.44H120.6A42.5,42.5,0,0,1,163,114.72Z" />
+  <path class="cls-10 pie2" d="M205.25,157.17A42.23,42.23,0,0,1,192.86,187l-29.81-29.81Z" />
+</svg>

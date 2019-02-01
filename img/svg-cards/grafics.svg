@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+  <defs>
+    <style>
+      .cls-1 {fill: #fbfaf9;}
+      .cls-2 {fill: url(#linear-gradient);}
+      .cls-3 {fill: #494948;}
+      .cls-4 {fill: url(#linear-gradient-2);}
+      .cls-5 {fill: #999;}
+      .cls-6 {fill: url(#linear-gradient-3);}
+      .cls-7 {fill: url(#linear-gradient-4);}
+
+      @keyframes bar1 {
+        to {
+          transform: scale(1, 0.2);
+        }
+      }
+      .bar1 {
+        animation: bar1 2000ms ease-in-out alternate infinite;
+        transform-origin: 0 231.09px;
+      }
+      @keyframes bar2 {
+        to {
+          transform: scale(1, 4);
+        }
+      }
+      .bar2 {
+        animation: bar2 2000ms ease-in-out alternate infinite;
+        transform-origin: 0 231.09px;
+      }
+
+      @keyframes box {
+        from {
+          transform: translateY(-15px);
+        }
+      }
+      .box {
+        animation: box 3000ms ease-in-out alternate infinite;
+      }
+      @keyframes box-item {
+        from {
+          transform: scale(0.9);
+        }
+      }
+      .box-item {
+        animation: box-item 1500ms ease-in-out alternate -800ms infinite;
+        transform-origin: 227.5px 84.5px;
+      }
+
+      @keyframes dots {
+        from {
+          transform: translateX(10px);
+        }
+      }
+      .dots {
+        animation: dots 6000ms ease-in-out -3000ms alternate infinite;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="153.36" y1="86.29" x2="153.36" y2="211.87" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#666665" />
+      <stop offset="0.4" stop-color="#636362" />
+      <stop offset="0.72" stop-color="#595958" />
+      <stop offset="1" stop-color="#494948" />
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="153.36" y1="86.29" x2="153.36" y2="211.86" xlink:href="#linear-gradient" />
+    <linearGradient id="linear-gradient-3" x1="95.4" y1="200.09" x2="134.35" y2="239.04" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1dc97f" />
+      <stop offset="0.26" stop-color="#1cc67e" />
+      <stop offset="0.47" stop-color="#19bc7d" />
+      <stop offset="0.66" stop-color="#14ab79" />
+      <stop offset="0.84" stop-color="#0c9375" />
+      <stop offset="1" stop-color="#047870" />
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="219.14" y1="76.42" x2="235.78" y2="93.05" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6897ad" />
+      <stop offset="0.25" stop-color="#6694aa" />
+      <stop offset="0.46" stop-color="#608ba0" />
+      <stop offset="0.65" stop-color="#567d8f" />
+      <stop offset="0.82" stop-color="#476877" />
+      <stop offset="0.99" stop-color="#354e59" />
+      <stop offset="1" stop-color="#344c57" />
+    </linearGradient>
+  </defs>
+  
+  <g class="dots">
+    <ellipse class="cls-1" cx="44.84" cy="145.78" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="44.84" cy="156.77" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="44.84" cy="167.75" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="68.15" cy="145.78" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="68.15" cy="156.77" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="68.15" cy="167.75" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="56.49" cy="145.78" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="56.49" cy="156.77" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="56.49" cy="167.75" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="91.45" cy="145.78" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="91.45" cy="156.77" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="91.45" cy="167.75" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="79.8" cy="145.78" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="79.8" cy="156.77" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="79.8" cy="167.75" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="114.75" cy="145.78" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="114.75" cy="156.77" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="114.75" cy="167.75" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="103.1" cy="145.78" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="103.1" cy="156.77" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="103.1" cy="167.75" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="138.06" cy="145.78" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="138.06" cy="156.77" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="138.06" cy="167.75" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="126.4" cy="145.78" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="126.4" cy="156.77" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="126.4" cy="167.75" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="161.36" cy="145.78" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="161.36" cy="156.77" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="161.36" cy="167.75" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="149.71" cy="145.78" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="149.71" cy="156.77" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="149.71" cy="167.75" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="184.66" cy="145.78" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="184.66" cy="156.77" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="184.66" cy="167.75" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="173.01" cy="145.78" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="173.01" cy="156.77" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="173.01" cy="167.75" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="207.97" cy="145.78" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="207.97" cy="156.77" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="207.97" cy="167.75" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="196.32" cy="145.78" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="196.32" cy="156.77" rx="1.94" ry="1.83" />
+    <ellipse class="cls-1" cx="196.32" cy="167.75" rx="1.94" ry="1.83" />
+  </g>
+  
+  <rect class="cls-2" x="82.88" y="86.29" width="140.94" height="62.79" />
+  <path class="cls-3" d="M216.14,94v47.41H90.57V94H216.14m15.38-15.38H75.19v78.16H231.52V78.61Z" />
+  <rect class="cls-4" x="82.88" y="149.08" width="140.94" height="62.79" />
+  <path class="cls-3" d="M216.14,156.77v47.41H90.57V156.77H216.14m15.38-15.38H75.19v78.16H231.52V141.39Z" />
+  <rect class="cls-5" x="144.71" y="115.13" width="17.3" height="5.13" />
+  <rect class="cls-5" x="144.71" y="177.91" width="17.3" height="5.13" />
+  
+  <path class="cls-6" d="M114.87,247.1a27.55,27.55,0,1,1,20.19-8.8A27.61,27.61,0,0,1,114.87,247.1Zm0-52.47a24.92,24.92,0,1,0,24.93,24.92A25,25,0,0,0,114.87,194.63Z" />
+  <rect class="cls-1 bar1" x="103.34" y="208.02" width="5.76" height="23.06" />
+  <rect class="cls-1" x="111.99" y="217.63" width="5.76" height="13.45" />
+  <rect class="cls-1 bar2" x="120.64" y="225.32" width="5.77" height="5.77" />
+
+  <g class="box">
+    <path class="cls-1" d="M257.1,113.37H198.64V54.9H257.1Zm-57.18-1.28h55.9V56.18h-55.9Z" />
+    <g class="box-item">  
+      <circle class="cls-1" cx="227.87" cy="84.14" r="18.9" />
+      <path class="cls-7" d="M237.16,78.88V91.67H218.58V77.25a.65.65,0,0,1,.65-.65h5.06a.65.65,0,0,1,.62.47l.35,1.17h11.25A.65.65,0,0,1,237.16,78.88Z" />
+    </g>
+  </g>
+</svg>
