@@ -18,21 +18,20 @@ body{
 header
 {
 	margin: 0 auto;
-	height: 0.05em;
-	padding-top: 2%;
-	padding-bottom: 2%;
+	height: 66px;
 	text-align: center;
-	background-color: rgb(49,49,54);
+	background-color: #1784c7;
 	color:white;
 }
+
 
 .menu-fixed{
 	margin: 0;
 	position: fixed;
-	top:0em;
 	width: 100%;
-	height: 7%;
-	background-color: rgb(62,69,76);
+	height: 65px;
+	background-color: #3e454c;
+	z-index: 2;
 }
 
 .menu-tags{
@@ -40,29 +39,49 @@ header
 }
 
 .menu-links{
-	margin-top: 15px;
+	margin-top: 20px;
 	display: block;
 	float: left;
 	color:#f2f2f2;
 	text-decoration: none;
-	font-size: 17px;
+	font-size: 16px;
 	margin-left: 12px;
 	padding: 5px 25px 5px 25px; 
-
+	box-shadow: 2px 0 #1784c7;
+	border-bottom-left-radius: 15px;
+	
 }
+
+.menu-links:hover{
+	animation: 1s animation-color alternate; 
+	background-color: #1784c7;
+}
+
+.logo-nav{
+	width: 30px;
+	height: auto;
+}
+
 .banner-img{
 	width: 100%;
 	background-size: cover;
-	
+
 }
+
+
+
 .blur{
-	background-color: rgb(44,49,54);
+	background-color: rgba(44,49,54,0.9);
+	box-shadow: 1px 1px #1784c7;
 }
 
 #btnLogin{
 	float: right;
 	margin-right: 30px;
-	border-radius: 15px;
+	box-shadow: 2px 0 lime;
+}
+#btnLogin:hover{
+	animation: 1s animation-color-l; 
 }
 
 article
@@ -70,24 +89,47 @@ article
 	box-sizing: border-box;
 	float:left;
 	height: 100%;
-	background-color: grey;
 	padding: 0;
 	text-align: center;
 	height: 400px;
 }
-
+	
 	.col-index
 	{
-	background-color: #91C9E8;
-	width: 100%;
-	padding: 0;
-	border: 1px solid #000;
+		background-attachment: fixed;
+		background-position: center;
+		width: 100%;
+		padding: 0;
+		background-color:rgb(8, 158, 218);
+	}
+
+	.div-title-banner{
+		margin: 45px;
+		position: absolute;
+	    z-index: 1;
+	}.title-banner{
+		color: #fff;
+		text-decoration: none;
+	}.p-title-banner{
+		font-size: 35px;
+	}.p-subtitle-banner{
+		margin: 25px;
+		color: #fff;
+		font-size: 15px;
+	}.btn-registro-banner{
+		margin: 45px;
+		text-decoration: none;
+		color: #000;
+		background-color: #f2f2f2;
+		padding: 10px 15px 10px 15px;
+		font-size: 16px;
+		border-radius: 5px;
 	}
 
 	.card
 	{
-	background-color: #D1D1D1;
-	width: 50%;
+		background-color: #D1D1D1;
+		width: 50%;
 	}
 
 @media screen and (max-width: 960px){
@@ -117,15 +159,36 @@ article
 	}
 	.col-index
 	{
-	width: 100%;
+		width: 100%;
 	}
 	.card
 	{
-	width: 100%;
+		width: 100%;
 	}
 
 	header
 	{
-	width:100%;
+		width:100%;
+	}
+}
+
+
+
+/* Animaciones */
+
+@keyframes animation-color {
+	to{
+	background-color: #1784c7;
+	}
+	from{
+	background-color: rgb(24, 13, 91);
+	}
+}
+@keyframes animation-color-l {
+	to{
+	background-color: green;
+	}
+	from{
+	background-color: rgb(24, 13, 91);
 	}
 }
