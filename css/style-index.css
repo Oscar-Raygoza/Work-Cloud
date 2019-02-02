@@ -115,7 +115,10 @@ article
 		animation: scrollMoveSvg 1s;
 		animation-fill-mode: forwards;
 	}
-	
+	.animateScrollMoveUp{
+		animation: scrollMoveSvgUp 1s;
+		animation-fill-mode: forwards;
+	}
 
 	.div-title-banner{
 		margin: 45px;
@@ -351,73 +354,19 @@ article
 
 
   @keyframes scrollMoveSvg{
-	 0%{
-		 margin: 0px;
+	 to{
+		margin: 45px;
+	 }from{
+		margin: 0px;
 	 }
-	 10%{
-		margin: 3px;
-	}
-	20%{
-		margin: 6px;
-	}
-	30%{
-		margin: 9px;
-	}
-	40%{
-		margin: 12px;
-	}
-	50%{
-		margin: 15px;
-	}
-	60%{
-	   margin: 18px;
-   }
-   70%{
-	   margin: 21px;
-   }
-   80%{
-	   margin: 24px;
-   }
-   90%{
-	   margin: 27px;
-   }
-   100%{
-		margin: 30px;
-   }
   }
 
-  @keyframes scrollMoveSvgDown{
-	100%{
-		margin: 0px;
+  @keyframes scrollMoveSvgUp{
+	to{
+	   margin: 0px;
+	}from{
+	   margin: 45px;
 	}
-	90%{
-	   margin: 3px;
-   }
-   80%{
-	   margin: 6px;
-   }
-   70%{
-	   margin: 9px;
-   }
-   60%{
-	   margin: 12px;
-   }
-   50%{
-	   margin: 15px;
-   }
-   40%{
-	  margin: 18px;
-  }
-  30%{
-	  margin: 21px;
-  }
-  20%{
-	  margin: 24px;
-  }
-  10%{
-	  margin: 27px;
-  }
-  0%{
-	   margin: 30px;
-  }
  }
+
+  

@@ -17,8 +17,6 @@ function scrollMenuFixed() {
          else 
     document.getElementById("banner-img-index-down").className = "banner-img";
 
-
-    
 }
 
 
@@ -31,7 +29,6 @@ var toggleMenu = document.getElementById("toggle-menu");
 
 
 
-console.log('Hola que hace');
 
 
 
