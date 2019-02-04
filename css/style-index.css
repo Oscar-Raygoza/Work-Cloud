@@ -7,6 +7,8 @@ body{
 	background: rgb(44,49,54);
 	font-size: 1.6rem;
   	font-family: "Open Sans", sans-serif;
+}#body-help{
+	background-color: #2fce92;
 }
 
 #wrapper
@@ -69,22 +71,29 @@ header
 
 }
 
+.center-absolute{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
 
+	top: 80%;
+	left: 47%;
+
+	width: 40px;
+	height: 15px;
+	
+	background-color: #1784c7;
+
+}
 
 .blur{
 	background-color: rgba(44,49,54,0.9);
 	box-shadow: 1px 1px #1784c7;
 }
 
-.alert{
-	display: none;
-	position: relative;
-	background-color: #f00;
-	color: #fff;
-	height: 20px;
-	font-size: 15px;
-	text-align: center;
-}
 
 #btnLogin{
 	float: right;
@@ -180,7 +189,38 @@ article
 		background-color: rgba(0, 202, 142, 0.842);
 		z-index: 1;
 	}
-	
+	.imput-help{
+		padding-left: 10px;
+		position: absolute;
+
+		top: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+
+		top: 50%;
+		width: 480px;
+		height: 15px;
+
+		display: inline-block;
+
+		color: #fff4e0;
+		background-color: rgba(255, 197, 0, 0.842);
+		font-size: 18px;
+		text-align: center;
+		padding: .9em 1.8em;
+		border: none;
+		cursor: pointer;
+		outline: none;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+	}.p-help{
+		top:30%;
+		background-color: transparent;
+		font-size: 40px;
+		font-weight: 800;
+	}
 
 @media screen and (max-width: 960px){
 
