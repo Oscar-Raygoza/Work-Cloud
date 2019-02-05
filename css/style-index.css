@@ -94,6 +94,13 @@ header
 	box-shadow: 1px 1px #1784c7;
 }
 
+#p-opss{
+	color:rgb(0, 255, 179);
+	font-size: 50px;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding-bottom: 150px;
+	
+}
 
 #btnLogin{
 	float: right;
@@ -296,6 +303,7 @@ article
 	background-color: rgb(24, 13, 91);
 	}
 }
+
 
 
 
