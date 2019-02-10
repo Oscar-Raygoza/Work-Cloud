@@ -3,6 +3,7 @@
     <head>
          <meta charset="utf-8">
          <title>Work Cloud</title>
+         <link rel="stylesheet" href="../assets/fonts/demo-files/demo.css">
          <link href="../assets/css/style-index.css" type="text/css" rel="stylesheet">
          <link rel="shortcut icon" href="../assets/img/ico/work-cloud-logo.ico" type="image/x-icon">
          <meta name="viewport" content="width=device-width,user-scalable=no">
@@ -77,7 +78,7 @@
             </p>
           </article>
 
-          <article class="card" id="columna3">
+          <article class="card">
               <p class="card-title"><b>Ejecucion de tareas</b></p>
               <img class="img-card-index" src="../assets/img/svg-cards/edit.svg" alt="">
               <p class="p-card-index">
@@ -126,15 +127,39 @@
 
         </section>
       </div>
+      <article class="container">
+        <div onLoad="mostrar_hora()">  
+          <br> 
+            <div id="fecha">
+                <p class="p-title-banner" id="title-date"><a href="#" class="title-banner">Ya solo faltan</a></p>
+                <span id="meses"></span> 
+                <span id="dias"></span>  
+                <span id="hora"></span>  
+                <span id="minuto"></span>  
+                <span id="segundo"></span> 
+            </div>  
+          </div>
+    </article>
       <footer>
-          <article class="footer">
-              <div onLoad="mostrar_hora()">   
-                  <div id="fecha">
+         <article class="container footer">
+            <article class="card">
+                <ul class="footer-ul">
+                  <li class="footer-li"><a href="#" class="footer-a"><spam class="icon icon-location footer-spam"></spam><p class="footer-p">Pabellon de Arteaga</p><p class="footer-p footer-p-bold"><br>Pabellon de Arteaga</p></a></li>
+                  <li class="footer-li"><a href="#" class="footer-a"><spam class="icon icon-mail footer-spam"></spam><p class="footer-p">oscar.eduardo.raygoza@gmail.com</p><p class="footer-p footer-p-bold"><br>Contactanos</p></a></li>
+                  <li class="footer-li"><a href="#" class="footer-a"><spam class="icon icon-phone footer-spam"></spam><p class="footer-p">044-465-135-31-38</p><p class="footer-p footer-p-bold"><br>Comunicate con nosotros</p></a></li>                 
+                </ul>
+            </article>
 
-                      <span id="meses"></span> meses,<span id="dias"></span> dias, <span id="hora"></span> horas, <span id="minuto"></span> minutos,  <span id="segundo"></span> segundos
-                  </div>  
-                </div>
-          </article>
+            <article class="card">
+                <ul class="footer-ul footer-ul-right">
+                  <li class="footer-li footer-li-right"><a href="#" class="footer-a"><p class="footer-p footer-p-bold"><br>Work Cloud</p></a><spam class="icon icon-facebook footer-spam-right"></spam></li>
+                  <li class="footer-li"><a href="#" class="footer-a"><p class="footer-p footer-p-bold">_Work_Cloud (oficial)</p></a><spam class="icon icon-instagram footer-spam-right"></spam></li>
+                  <li class="footer-li"><a href="#" class="footer-a"><p class="footer-p footer-p-bold">@Work_Cloud (oficial)</p></a><spam class="icon icon-twitter footer-spam-right"></spam></li>
+                  <li class="footer-li"><a href="#" class="footer-a"><p class="footer-p footer-p-bold">Work Cloud</p></a><spam class="icon icon-youtube footer-spam-right"></spam></li>
+
+                </ul>
+            </article>
+         </article>
       </footer>
       <script src="../assets/js/front-index.js"></script>
     </body>
