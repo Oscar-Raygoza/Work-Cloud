@@ -1,0 +1,173 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title Work Cloud
+  link(rel='stylesheet', href='../assets/fonts/demo-files/demo.css')
+  link(href='../assets/css/style-index.css', type='text/css', rel='stylesheet')
+  link(rel='shortcut icon', href='../assets/img/ico/work-cloud-logo.ico', type='image/x-icon')
+  meta(name='viewport', content='width=device-width,user-scalable=no')
+header
+  #menu-fixed.menu-fixed
+    .menu-tags
+      img.menu-links.logo-nav(src='../assets/img/work-cloud-logo.svg', alt='')
+      a.menu-links(href='index.html') Home
+      a.menu-links(href='about.html') About
+      a.menu-links(href='documentation.html') Documentation
+      a#btnLogin.menu-links(href='login.html') Log in
+      a#btnLogin.menu-links(href='help.html') Help
+      a#toggle-menu.cd-nav-trigger(href='#0')
+        | Menu
+        span
+#wrapper
+  section
+    .div-title-banner
+      p.p-title-banner
+        a.title-banner(href='#') Work Cloud
+      p.p-subtitle-banner
+        b &iquest;Que es Work Cloud?
+      p.p-subtitle-banner
+        | Work Cloud es una red social para empresas 
+        br
+        | de software con el fin de compartir sus proyectos,
+        br
+        |                dudas, aclaraciones, etc. 
+        br
+      p.p-subtitle-banner
+        | Con el resultado de establecer una mejor conversaci&ograve;n
+        br
+        |                 con todo el personal y obtener mejores resultados
+        br
+        |                 para la empresa y sus trabajadores.
+      a.btn-registro-banner(href='#') Registrate
+    article#columna1.col-index
+      img#banner-img-index.banner-img(src='../assets/img/banners/index-banner-3.svg', alt='')
+    .div-father
+      .div-title-banner.right
+        p.p-title-banner
+          a.title-banner(href='#') Utilidad
+        p.p-subtitle-banner
+          b &iquest;Por qu&eacute; utilizar Work Cloud?
+        p.p-subtitle-banner
+          | Work Cloud es la una tendencia para las empresas 
+          br
+          | Ya que esta mejora el rendimiento y la comunicaci&oacute;n entre
+          br
+          |               los trabajadores en el &aacute;rea de software como por ejemplo DevOps,
+          br
+          | dise&ntilde;adores, programadores, etc.
+        p.p-subtitle-banner
+          br
+          |                 con la diferencia de utilizar otra red social esta misma maneja 
+          br
+          |                 herramientas especiales para la comunicaci&oacute;n.
+        a.btn-registro-banner(href='#') Saber mas
+      article#columna1.col-index.transparent
+        img#banner-img-index-down.banner-img(src='../assets/img/banners/index-banner-4.svg', alt='')
+    article#columna2.card
+      p.card-title
+        b Rendimiento en el trabajo
+      img.img-card-index(src='../assets/img/svg-cards/process.svg', alt='')
+      p.p-card-index
+        | Supervisar el progreso.
+        | identificar los pasos para cumplir el objetivo
+        | evaluar que tanto congenia en las tareas
+        | reconocer el exito de cada uno
+        | evaluar si posee el tamano adecuado
+        | sea adaptable a cada proyecto
+        | cuente con los recursos adecuados
+    article.card
+      p.card-title
+        b Ejecucion de tareas
+      img.img-card-index(src='../assets/img/svg-cards/edit.svg', alt='')
+      p.p-card-index
+        | Desglose de tareas
+        | verificaci&oacute;n de que las tareas cumplan con los objetivos propuestos
+        | ordenamiento de tareas
+        | fijar tiempos de ejecuci&oacute;n
+        | definicion de los responsables de las tareas o grupo de ellas
+        | estimacion de costos de ejecuci&oacute;n
+    article#columna3.card
+      p.card-title
+        b Almacenamiento
+      img.img-card-index(src='../assets/img/svg-cards/grafics.svg', alt='')
+      p.p-card-index
+        | Cada usuario tendra 15 GB de almacenamiento libre para cumplir con sus responsabilidades en el sistema, el cu&aacute;l se podra usar de manera libre y sencilla con facil uso.
+    article#columna3.card
+      p.card-title
+        b Progreso r&aacute;pido
+      img.img-card-index(src='../assets/img/svg-cards/pay.svg', alt='')
+      p.p-card-index
+        | Todos los empleados tiene la oportunidad de avanzar y realizar de una manera m&aacute;s eficaz
+        | las tareas asignadas a cada uno de ellos.
+    article#columna3.card
+      p.card-title
+        b Dise&ntilde;o y Usabilidad
+      img.img-card-index(src='../assets/img/svg-cards/all personal.svg', alt='')
+      p.p-card-index
+        | Nos enfocamos en un dise&ntilde;o mas minimalista para los usuarios
+        | con una interface mas interactiva para tener una mejor experiencia interactiva
+    article#columna3.card
+      p.card-title
+        b Soporte
+      img.img-card-index(src='../assets/img/svg-cards/grafics.svg  ', alt='')
+      p.p-card-index
+        | Se le brindar&aacute; soporte a los usuarios  que permanezcan y usen
+        | la aplicaci&oacute;n de manera continua, evitando que e estos tengan problemas y de ser asi,
+        | sean solucionados de manera inmediata.
+article.container
+  div(onload='mostrar_hora()')
+    br
+    #fecha
+      p#title-date.p-title-banner
+        a.title-banner(href='#') Ya solo faltan
+      span#meses
+      span#dias
+      span#hora
+      span#minuto
+      span#segundo
+footer
+  article.container.footer
+    article.card
+      ul.footer-ul
+        li.footer-li
+          a.footer-a(href='#')
+            spam.icon.icon-location.footer-spam
+            p.footer-p Pabellon de Arteaga
+            p.footer-p.footer-p-bold
+              br
+              | Pabellon de Arteaga
+        li.footer-li
+          a.footer-a(href='#')
+            spam.icon.icon-mail.footer-spam
+            p.footer-p oscar.eduardo.raygoza@gmail.com
+            p.footer-p.footer-p-bold
+              br
+              | Contactanos
+        li.footer-li
+          a.footer-a(href='#')
+            spam.icon.icon-phone.footer-spam
+            p.footer-p 044-465-135-31-38
+            p.footer-p.footer-p-bold
+              br
+              | Comunicate con nosotros
+    article.card
+      ul.footer-ul.footer-ul-right
+        li.footer-li.footer-li-right
+          a.footer-a(href='#')
+            p.footer-p.footer-p-bold
+              br
+              | Work Cloud
+          spam.icon.icon-facebook.footer-spam-right
+        li.footer-li
+          a.footer-a(href='#')
+            p.footer-p.footer-p-bold _Work_Cloud (oficial)
+          spam.icon.icon-instagram.footer-spam-right
+        li.footer-li
+          a.footer-a(href='#')
+            p.footer-p.footer-p-bold @Work_Cloud (oficial)
+          spam.icon.icon-twitter.footer-spam-right
+        li.footer-li
+          a.footer-a(href='#')
+            p.footer-p.footer-p-bold Work Cloud
+          spam.icon.icon-youtube.footer-spam-right
+script(src='../assets/js/front-index.js')

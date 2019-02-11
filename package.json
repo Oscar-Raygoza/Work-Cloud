@@ -4,8 +4,14 @@
   "description": "Proyecto de estadia Red Social para empresas",
   "main": "app.js",
   "scripts": {
-    "test": "test"
+    "start": "webpack-dev-server --open --config webpack.config.js"
   },
   "author": "Oscar Raygoza",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  }
 }
