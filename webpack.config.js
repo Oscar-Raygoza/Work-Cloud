@@ -7,12 +7,19 @@ const htmlWebpack = new HtmlWebpackPlugin({
 });
 
 module.exports = {
-    entry: './assets/js/entry.js', 
+    mode: "development",
+    entry: path.join(__dirname, './assets/js/entry.js'), 
     output: {
         publicPath: '/',
-        path: path.join(__dirname, '..'),    
+        path: path.resolve(__dirname, '..'),    
         filename: 'dist/js/bundle.js'
     },
     plugins: [htmlWebpack],
-    module: { }
+    module: {
+
+        test: /\.css$/,
+        rules:['style-loader', 'css-loader']
+    }
 }
+
+
