@@ -4,7 +4,6 @@ const bodyParser = require('body-parser');
 const Sequelize = require('sequelize');
 const cookisSession = require('cookie-session');
 const methodOverride = require('method-override');
-
 const app = express();
 
 app.use(cookisSession({
