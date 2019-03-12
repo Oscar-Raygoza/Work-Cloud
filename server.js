@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const Sequelize = require('sequelize');
 const cookisSession = require('cookie-session');
 const methodOverride = require('method-override');
+const compression = require('compression');
 const app = express();
 
 app.use(cookisSession({
@@ -11,6 +12,8 @@ app.use(cookisSession({
     keys: ['dhsajlhd','djkbsa73djlksan','gdusioa']
 }));
 
+app.use(compression());
+app.use(express.static(__dirname + '/assets'));
 
 const staticsRoutes = require('./routes/statics_routes');
 //const registrationsRoutes = require('./routes/registrations_routes');
