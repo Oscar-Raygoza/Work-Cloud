@@ -7,6 +7,21 @@ const methodOverride = require('method-override');
 const compression = require('compression');
 const app = express();
 
+/**Configurando la bd */
+const sequelize = new Sequelize('work_cloud_db', "", "", {
+    host: 'localhost',
+    dialect: 'postgres',
+})
+sequelize.authenticate()
+  .then(() => {
+    console.log('Conectado')
+  })
+  .catch(err => {
+    console.log(err)
+  })
+
+
+  /**Confugurando las cookis */
 app.use(cookisSession({
     name: 'galleta',
     keys: ['dhsajlhd','djkbsa73djlksan','gdusioa']
