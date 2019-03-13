@@ -7,19 +7,20 @@ const methodOverride = require('method-override');
 const compression = require('compression');
 const app = express();
 
-/**Configurando la bd */
-const sequelize = new Sequelize('work_cloud_db', "", "", {
-    host: 'localhost',
-    dialect: 'postgres',
-})
-sequelize.authenticate()
-  .then(() => {
-    console.log('Conectado')
-  })
-  .catch(err => {
-    console.log(err)
-  })
+const sqlite3 = require('sqlite3');
 
+let db = new sqlite3.Database('work_cloud_db');
+
+db.run(`CREATE TABLE users(
+        id_user INT PRIMARY KEY,
+        name VARCHAR(50),
+        lastname VARCHAR(60),
+        email VARCHAR(60) UNIQUE,
+        telephone VARCHAR(15) UNIQUE,
+        sex CHAR,
+        password_hash  VARCHAR(36)
+        )`);
+db.close();
 
   /**Confugurando las cookis */
 app.use(cookisSession({
