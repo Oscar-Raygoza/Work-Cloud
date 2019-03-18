@@ -1,0 +1,54 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title Work Cloud
+  link(rel='stylesheet', href='/fonts/demo-files/demo.css')
+  link(href='/css/style-index.css', type='text/css', rel='stylesheet')
+  link(rel='shortcut icon', href='/img/ico/work-cloud-logo.ico', type='image/x-icon')
+  link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", rel="stylesheet", integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", crossorigin="anonymous")
+  meta(name='viewport', content='width=device-width,user-scalable=no')
+header
+  #menu-fixed.menu-fixed
+    .menu-tags
+      img.menu-links.logo-nav(src='/img/work-cloud-logo.svg', alt='')
+      a.menu-links(href='/') Home
+      a.menu-links(href='/about') About
+      a.menu-links(href='/documentation') Documentation
+      a#btnLogin.menu-links(href='/login') Log in
+      a#btnLogin.menu-links(href='/help') Help
+      a#toggle-menu.cd-nav-trigger(href='#0')
+        | Menu
+        span
+body
+    .container.container-txt-black
+        form.text-center.border.border-light.p-5
+        p.mb-4.text-center.container-blue Sign up
+        .form-row.mb-4
+            
+            .col
+            // First name
+            input#defaultRegisterFormFirstName.form-control(type='text' placeholder='First name')
+           
+            .col
+            // Last name
+            input#defaultRegisterFormLastName.form-control(type='text' placeholder='Last name')
+        
+        input#defaultRegisterFormEmail.form-control.mb-4(type='nickname' placeholder='Nick Name')
+        // E-mail
+    
+        input#defaultRegisterFormEmail.form-control.mb-4(type='email' placeholder='E-mail')
+        // Password
+        input#defaultRegisterFormPassword.form-control(type='password' placeholder='Password' aria-describedby='defaultRegisterFormPasswordHelpBlock')
+        small#defaultRegisterFormPasswordHelpBlock.form-text.text-muted.mb-4
+            | At least 8 characters and 1 digit
+        // Phone number
+        input#defaultRegisterPhonePassword.form-control(type='text' placeholder='Phone number' aria-describedby='defaultRegisterFormPhoneHelpBlock')
+        small#defaultRegisterFormPhoneHelpBlock.form-text.text-muted.mb-4
+            | Optional - for two step authentication
+        // Newsletter
+        .custom-control.custom-checkbox
+            input#defaultRegisterFormNewsletter.custom-control-input(type='checkbox')
+            label.custom-control-label(for='defaultRegisterFormNewsletter') Acepto Terminos & condiciones
+        // Sign up button
+        button.btn.btn-info.my-4.btn-block(type='submit') Registrarme
+
