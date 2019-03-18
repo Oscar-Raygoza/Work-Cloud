@@ -6,8 +6,9 @@
 body{
 	background: rgb(44,49,54);
 	font-size: 1.6rem;
-  	font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
+
 
 header{
 	margin: 0 auto;
@@ -284,6 +285,15 @@ article{
 
 
 
+.container-txt-black{
+	color: #000;
+}.container-blue{
+	background-color: #33b5e5;
+	color: #fff;
+	padding: 15px;
+	font-weight: 300;
+	font-size: 15pt;
+}
 
 
 
