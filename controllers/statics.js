@@ -11,7 +11,7 @@ module.exports = {
     register: function(req,res){
         res.render('statics/register');
     },
-    login: function(res,req){
+    login: function(req, res){
         res.render('statics/login');
     }
 
