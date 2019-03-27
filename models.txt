@@ -1,1 +1,0 @@
-sequelize model:generate --name User --attributes id_user:TEXT,email:TEXT,name:TEXT,lastname:TEXT,number:TEXT,nickname:TEXT,sex:TEXT, password_hash:TEXT 
