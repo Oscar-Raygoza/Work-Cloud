@@ -1,0 +1,23 @@
+*{
+    font-family: "Open Sans", sans-serif;
+}
+body{
+    background-color: #f2f2f2;
+}
+
+.navbar-brand img{
+    width: 30%;
+}
+
+input.transparent-input{
+    background-color:transparent !important;
+    border:none !important;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+ }
+ .transparent-textarea{
+    background-color:transparent !important;
+    border:none !important;
+    outline: none;
+    overflow: auto;
+ }
