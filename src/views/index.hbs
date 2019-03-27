@@ -1,0 +1,60 @@
+<div class="card">
+    <div class="card-header bg-dark">
+        <h3 class="card-title text-white">
+            <i class="fa fa-image"></i> Upload
+        </h3>
+    </div>
+    <div class="card-body">
+        <form action="/images" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <div class="imput-group">
+                    <div class="custom-file">
+                        <input type="file" name="image" id="inputGroup" aria-describedby="inputGroupFileAddon"
+                            class="custom-file-input" required>
+                        <label class="custom-file-label" for="inputGroupFile">Choose file</label>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="title" class="form-control" placeholder="Title for the image" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="description" id="" rows="2" class="form-control" placeholder="description"
+                        required></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success">
+                        <i class="fa fa-upload"></i>Upload Image
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card mt-2">
+    <div class="card-header bg-dark text-white">
+        <h3> <i class="far fa-images"></i> Publicaciones recientes</h3>
+    </div>
+    <div class="card-body">
+       <div class="row">
+            {{#each postImages }}
+            {{#if (imageHelper filename) }}
+                <div class="col-md-4">
+                    <a href="/images/{{uniqueId}}">
+                        <img src="/public/upload/{{filename}}" alt="" width="100%" height="auto" class="img-thumbnail">
+                    </a>    
+                </div>
+             {{else}}
+             <div class="col-md-4">
+                    <a href="/images/{{uniqueId}}">
+                        <video width="300" height="200"  class="video-fluid z-depth-1" autoplay loop muted>
+                            <source src="/public/upload/{{filename}}" type="video/mp4">
+                        </video>
+                    </a>    
+                </div>
+            {{/if}}
+            {{/each}}
+       </div>
+    </div>
+</div>

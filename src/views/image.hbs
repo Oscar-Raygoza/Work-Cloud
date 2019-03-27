@@ -1,0 +1,65 @@
+<div class="card">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <div class="form-group">
+            <input class="form-control transparent-input" type='text' name='name' placeholder="{{title}}" disabled>
+        </div>
+        <button class="btn btn-light" data-id="{{uniqueId}}" id="btn-edit-post"><i class="far fa-edit"></i></button>
+        <button class="btn btn-light" id="btn-delete" data-id="{{uniqueId}}"><i class="far fa-times-circle"></i></button>
+    </div>
+    <div class="card-body">
+        <div class="form-group">
+            <textarea class="form-control transparent-textarea" type='text' name='name' placeholder="{{description}}" disabled></textarea>
+        </div>
+        <div class="text-center">
+             {{#if (imageHelper filename) }}
+            <img src="/public/upload/{{filename}}" alt="" class="img-fluid">
+            {{else}}
+            <video width="100%" height="auto"  class="video-fluid z-depth-1" autoplay controls loop muted>
+                <source src="/public/upload/{{filename}}" type="video/mp4">
+            </video>
+            {{/if}}
+        </div>
+    </div>
+    <div class="card-footer d-flex  justify-content-between align-items-center">
+        <button class="btn btn-success" id="btn-like" data-id="{{filename}}">
+            <i class="fas fa-heart"></i> Like
+        </button>
+        <p>
+            <span class="likes-count">{{likes}}</span>
+            <i class="fas fa-heart"></i>
+        </p>
+        <p>
+            <i class="fas fa-eye"></i> {{views}}
+        </p>
+        <p>
+            <i class="fas fa-clock"></i> {{timeago timestanp}}
+        </p>
+    </div>
+</div>
+
+<div class="card mt-2">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h3>Comentarios</h3>
+        <button class="btn btn-info pl-5 pr-5" id="btn-toggle-comment"> 
+            <i class="fa fa-comment"></i>
+        </button>
+    </div>
+    <div class="card-body">
+        <blockquote>
+            <form action="/images/{{uniqueId}}/comment" method="POST">
+                <div class="form-group">
+                    <input type="text" class="form-control transparent-textarea" name="name" placeholder="name" required disabled>
+                </div>
+                <div class="form-group">
+                    <textarea name="description" id="" rows="2" class="form-control" placeholder="Tu comentario"
+                        required></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success pl-5 pr-5" id="btn-toggle-comment"> 
+                        <i class="fa fa-paper-plane"></i>
+                    </button>
+                </div>
+            </form>
+        </blockquote>
+    </div>
+</div>
