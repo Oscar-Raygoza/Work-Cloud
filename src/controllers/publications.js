@@ -15,7 +15,7 @@ ctrl.index = async (req, res) =>{
 ctrl.create = (req, res) =>{
     //Nethod Save
     const saveFile = async ()=>{
-
+        console.log("entre al savefile()")
         const fileUrl = randomName();
         const filesRepet = await Publications.find({ filename: fileUrl });
         if(filesRepet.length > 0){
