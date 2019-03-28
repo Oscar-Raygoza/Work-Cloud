@@ -21,3 +21,7 @@ input.transparent-input{
     outline: none;
     overflow: auto;
  }
+
+ .btn-no-waves .btn.waves-effect {
+    position: static;
+}
