@@ -1,3 +1,3 @@
 module.exports = {
-    Image: require('./Image')
+    Publications: require('./publications')
 }

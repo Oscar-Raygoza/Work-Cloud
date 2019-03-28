@@ -1,15 +1,15 @@
 const path = require('path');
 const { randomName }= require('../helpers/libs');
 const fs = require('fs-extra')
-const { Image } = require('../models/index')
+const { Publications } = require('../models/index')
 
 const ctrl = {};
 
 ctrl.index = async (req, res) =>{
-    let fileUri = req.params.image_id;
-    let image = await Image.findOne({filename: {$regex: fileUri}});
-    console.log(image);
-    res.render('image', image)
+    let fileUri = req.params.publication_id;
+    let publication = await Publications.findOne({filename: {$regex: fileUri}});
+    console.log(publication);
+    res.render('publications', publication)
 }
 
 ctrl.create = (req, res) =>{
@@ -17,7 +17,7 @@ ctrl.create = (req, res) =>{
     const saveFile = async ()=>{
 
         const fileUrl = randomName();
-        const filesRepet = await Image.find({ filename: fileUrl });
+        const filesRepet = await Publications.find({ filename: fileUrl });
         if(filesRepet.length > 0){
             saveFile();
         }
@@ -33,18 +33,18 @@ ctrl.create = (req, res) =>{
             || ext === '.mp4'){
                 await fs.rename(tempPath,targerPath);
         
-                const newPostImage = new Image({
+                const newPostPublication = new Publications({
                     title: req.body.title,
                     filename: fileUrl + ext,
                     description: req.body.description
                 });
-                const savePostImg = await newPostImage.save();
-                console.log(newPostImage);
-                res.redirect(`/images/` + fileUrl);
+                const savePostImg = await newPostPublication.save();
+                console.log(newPostPublication);
+                res.redirect(`/publications/` + fileUrl);
             }
             else{
                 await fs.unlink(tempPath);
-                res.status(500).json({ error: 'Only images'})
+                res.status(500).json({ error: 'Only files .mp4, .mp3, .png'})
             }    
         
         }

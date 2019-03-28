@@ -23,7 +23,7 @@ module.exports = (app) =>{
   
     //middlewares
       app.use(morgan('dev'));
-      app.use(multer({dest: path.join(__dirname, '../public/upload/temp')}).single('image'))
+      app.use(multer({dest: path.join(__dirname, '../public/upload/temp')}).single('publication'))
       app.use(express.urlencoded({extended: false}));
       app.use(express.json());
     // routes

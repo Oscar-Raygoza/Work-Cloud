@@ -2,15 +2,15 @@ const express = require('express');
 const router = express.Router();
 
 const home = require('../controllers/home');
-const image = require('../controllers/image');
+const publications = require('../controllers/publications');
 
 module.exports = app =>{
 router.get('/', home.index);
-router.get('/images/:image_id', image.index);
-router.post('/images/', image.create);
-router.post('/images/:image_id/like', image.like);
-router.post('/images/:image_id/comment', image.comment);
-router.delete('/images/:image_id', image.delete);
+router.get('/publications/:publication_id', publications.index);
+router.post('/publications/', publications.create);
+router.post('/publications/:publications_id/like', publications.like);
+router.post('/publications/:publications_id/comment', publications.comment);
+router.delete('/publications/:publications_id', publications.delete);
 
 app.use(router);
 };
