@@ -1,15 +1,32 @@
 const path = require('path');
 const { randomName }= require('../helpers/libs');
 const fs = require('fs-extra')
-const { Publications } = require('../models/index')
+const { Publications, Comment } = require('../models/index')
 
 const ctrl = {};
 
 ctrl.index = async (req, res) =>{
-    let fileUri = req.params.publication_id;
-    let publication = await Publications.findOne({filename: {$regex: fileUri}});
-    console.log(publication);
-    res.render('publications', publication)
+    const viewModel = { publication: {}, comments: {}};
+
+    const publication = await Publications.findOne({filename: {$regex: req.params.publication_id}});
+    console.log(publication)
+    
+    if(publication){
+       
+        publication.views += 1;
+        viewModel.publication = publication;
+        await publication.save();
+
+        const comments = await Comment.find({ 
+            publication_id: publication._id
+        });
+        console.log(comments)
+        viewModel.comments = comments;
+
+        res.render('publications', viewModel)
+    }else{
+        res.redirect('/');
+    }
 }
 
 ctrl.create = (req, res) =>{
@@ -55,13 +72,46 @@ ctrl.create = (req, res) =>{
 }
 
 
-ctrl.delete = (req, res) =>{
-    res.render('index')
+ctrl.delete = async (req, res) =>{
+    console.log('Entry to delete publication..')
+    const Publication = await Publications.findOne({
+        filename: {$regex: req.params.publications_id }
+    });
+    if(Publication){
+        await fs.unlink(path.resolve('./src/public/upload/'+ Publication.filename))
+        await Comment.deleteOne({
+            publication_id: Publication._id
+        });
+        await Publication.remove();
+        res.redirect('/');
+    }else{
+        res.status(500).json({error: 'Internal server error'})
+    }
 }
-ctrl.comment = (req, res) =>{
-    res.render('index')
-}
-ctrl.like = (req, res) =>{
-    res.render('index')
+
+ctrl.comment = async (req, res) =>{
+    const Publication = await Publications.findOne({
+        filename: {$regex: req.params.publications_id }
+    });
+    console.log(Publication);
+    if(Publication){
+        const newComment= new Comment(req.body);
+        newComment.publication_id = Publication._id;
+        await newComment.save();
+        res.redirect('/publications/' + Publication.uniqueId)
+        console.log(newComment) 
+    }else{
+        res.redirect('/');
+    }
+}   
+ctrl.like = async (req, res) =>{
+    const Publication = await Publications.findOne({
+        filename: {$regex: req.params.publications_id }
+    });
+    if(Publication){
+        Publication.likes += 1;
+        await Publication.save();
+        res.json({ likes: Publication.likes })
+    }
 }
 module.exports = ctrl;
