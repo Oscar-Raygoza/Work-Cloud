@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const path = require('path');
-const { ObjectId } = Schema.ObjectId;
+const ObjectId = Schema.ObjectId;
 
 const PublicationsSchema = new Schema({
     title: { type: String },
