@@ -1,16 +1,11 @@
-const { Schema } = require("mongoose");
-const { ObjectId } = Schema;
+const { Schema, model } = require("mongoose");
+const ObjectId = Schema.ObjectId;
 
 const CommentSchema = new Schema({
-    title: { type: String },
-    description: { type: String },
-    filename: { type: String },
-    views: { type: Number, default: 0 },
-    likes: { type: Number, default: 0 },
+    publication_id: { type: ObjectId },
+    user_id: { type: ObjectId },
+    comment: { type: String },
     timestanp: { type: Date, default: Date.now }
 });
-CommentSchema.virtual('uniqueId')
-    .get(function(){
-        return this.filename.replace(path.extname(this.filename),'');
-    });
-module.exports = mongoose.model('Comments', CommentSchema)
+
+module.exports = model('Comment', CommentSchema)
