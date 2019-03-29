@@ -5,7 +5,8 @@ const helpers = {};
 helpers.timeago = timestamp =>{
     return moment(timestamp).startOf("minutes").fromNow();
 }
-helpers.imageHelper = filename =>{
+
+helpers.publicationHelper = filename =>{
     const ext = path.extname(filename);
     if(ext === ".mp4")
     return false
