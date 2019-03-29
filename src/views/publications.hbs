@@ -1,38 +1,38 @@
 <div class="card">
     <div class="card-header d-flex justify-content-between align-items-center">
         <div class="form-group">
-            <input class="form-control transparent-input" type='text' name='name' placeholder="{{title}}" disabled>
+            <input class="form-control transparent-input" type='text' name='name' placeholder="{{publication.title}}" disabled>
         </div>
-        <button class="btn btn-light" data-id="{{uniqueId}}" id="btn-edit-post"><i class="far fa-edit"></i></button>
-        <button class="btn btn-light" id="btn-delete" data-id="{{uniqueId}}"><i class="far fa-times-circle"></i></button>
+        <button class="btn btn-light" data-id="{{publication.uniqueId}}" id="btn-edit-post"><i class="far fa-edit"></i></button>
+        <button class="btn btn-light" id="btn-delete" data-id="{{publication.uniqueId}}"><i class="far fa-times-circle"></i></button>
     </div>
     <div class="card-body">
         <div class="form-group">
-            <textarea class="form-control transparent-textarea" type='text' name='name' placeholder="{{description}}" disabled></textarea>
+            <textarea class="form-control transparent-textarea" type='text' name='name' placeholder="{{publication.description}}" disabled></textarea>
         </div>
         <div class="text-center">
-             {{#if (imageHelper filename) }}
-            <img src="/public/upload/{{filename}}" alt="" class="img-fluid">
+             {{#if (publicationHelper publication.filename) }}
+            <img src="/public/upload/{{publication.filename}}" alt="" class="img-fluid">
             {{else}}
             <video width="100%" height="auto"  class="video-fluid z-depth-1" autoplay controls loop muted>
-                <source src="/public/upload/{{filename}}" type="video/mp4">
+                <source src="/public/upload/{{publication.filename}}" type="video/mp4">
             </video>
             {{/if}}
         </div>
     </div>
     <div class="card-footer d-flex  justify-content-between align-items-center">
-        <button class="btn btn-success" id="btn-like" data-id="{{filename}}">
+        <button class="btn btn-success" id="btn-like" data-id="{{publication.filename}}">
             <i class="fas fa-heart"></i> Like
         </button>
         <p>
-            <span class="likes-count">{{likes}}</span>
+            <span class="likes-count">{{publication.likes}}</span>
             <i class="fas fa-heart"></i>
         </p>
         <p>
-            <i class="fas fa-eye"></i> {{views}}
+            <i class="fas fa-eye"></i> {{publication.views}}
         </p>
         <p>
-            <i class="fas fa-clock"></i> {{timeago timestanp}}
+            <i class="fas fa-clock"></i> {{timeago publication.timestanp}}
         </p>
     </div>
 </div>
@@ -45,8 +45,8 @@
         </button>
     </div>
     <div class="card-body">
-        <blockquote>
-            <form action="/publications/{{uniqueId}}/comment" method="POST">
+        <blockquote id="block-hidden">
+            <form action="/publications/{{publication.uniqueId}}/comment" method="POST">
                 <div class="form-group">
                     <input type="text" class="form-control transparent-textarea" name="name" placeholder="name" required disabled>
                 </div>
@@ -61,5 +61,23 @@
                 </div>
             </form>
         </blockquote>
+        <ul class="list-group p-4">
+            {{#each comments}}
+            <li class="list-group-item">
+                <div class="row">
+                    <a href="#" class="col text-center">
+                        <!--IMAGE USER -->
+                        <img src="" alt="">
+                    </a>
+                    <blockquote class="col">
+                        <p class="lead">{{comment}}</p>
+                        <footer class="blockquote-footer">
+                            {{name}} - {{timeago timestanp}}
+                        </footer>
+                    </blockquote>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
     </div>
 </div>
