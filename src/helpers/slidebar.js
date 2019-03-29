@@ -1,13 +1,13 @@
 const Stats = require('./stats');
-const Comments = require('./comments');
 const Publications = require('./publications');
+const Comments = require('./comments');
 
 module.exports = async viewModel=> {
 
     const results = await Promise.all([
         Stats(),
         Publications.popular(),
-        Comments.newWest()
+        Comments.newest()
     ]);
     viewModel.slidebar = {
         stats: results[0],

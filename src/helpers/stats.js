@@ -11,28 +11,36 @@ async function publicationsViewsAll(){
         _id: '1',
         viewsAll: { $sum: '$views'}
     }}]);
-    return result[0].viewsAll;
+    let viewsAll = 0;
+    if(result.length > 0) {
+        viewsAll += result[0].viewsAll;
+    }
+    return viewsAll;
 }
-async function likes0All(){
+async function likesAll(){
     const result =await Comment.aggregate([{$group: {
         _id: '1',
         likesAll: { $sum: '$likes'}
     }}]);
-    return result[0].likes;
+    let likesAll = 0;
+  if (result.length > 0) {
+    likesAll += result[0].likesAll;
+  }
+  return likesAll;
 }
 
 module.exports = async ()=>{
-    const result = await Promise.all([
+    const results = await Promise.all([
         publicationsCounter(),
         commentsCounter(),
         publicationsViewsAll(),
-        likes0All()
+        likesAll()
     ]);
     return {
-        publictions:  result[0],
-        comments: result[1],
-        views: result[2],
-        comments: result[3]    
+        publictions:  results[0],
+        comments: results[1],
+        views: results[2],
+        comments: results[3]    
     }
     
 }

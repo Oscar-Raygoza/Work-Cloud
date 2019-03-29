@@ -1,12 +1,14 @@
-const path = require('path');
-const { randomName }= require('../helpers/libs');
+const path = require('path')
+const { randomName }= require('../helpers/libs')
 const fs = require('fs-extra')
 const { Publications, Comment } = require('../models/index')
+
+const slidebar = require('../helpers/slidebar')
 
 const ctrl = {};
 
 ctrl.index = async (req, res) =>{
-    const viewModel = { publication: {}, comments: {}};
+    let viewModel = { publication: {}, comments: {}};
 
     const publication = await Publications.findOne({filename: {$regex: req.params.publication_id}});
     console.log(publication)
@@ -22,6 +24,8 @@ ctrl.index = async (req, res) =>{
         });
         console.log(comments)
         viewModel.comments = comments;
+
+        viewModel = await slidebar(viewModel)
 
         res.render('publications', viewModel)
     }else{
