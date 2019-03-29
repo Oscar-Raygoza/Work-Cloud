@@ -7,5 +7,11 @@ const CommentSchema = new Schema({
     comment: { type: String },
     timestanp: { type: Date, default: Date.now }
 });
-
+CommentSchema.virtual('publication')
+    .set(function(publication){
+        this._publication = publication;
+    })
+    .get(function(){
+        return this._publication
+    })
 module.exports = model('Comment', CommentSchema)

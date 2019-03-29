@@ -27,9 +27,11 @@ $('#btn-delete').click(function(e){
             url: '/publications/'+ publicationId,
             type: 'DELETE'
         }).done(data =>{
+            alert(`Picture `);
             $(this).removeClass('btn-light').addClass('btn-success');
             $(this).find('i').removeClass('fa-times').addClass('fa-check');
             $(this).append('<spam>ok</spam>');
+            $('#btn-toggle-comment').hide();
         }).catch(err =>{
             console.log(err);
         });

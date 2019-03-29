@@ -1,0 +1,22 @@
+{{#if slidebar.comments}}
+<div class="card mt-2">
+    <div class="card-header bg-dark text-white">
+        <h5><i class="fas fa-comments"></i> Ultimos Comentarios </h5>
+    </div>
+    <div class="card-body">
+        {{#each slidebar.comments }}
+        <div class="row">
+            <div class="col">
+                <a href="/publications/{{publication.uniqueId}}">
+                    <img src="/public/upload/{{publication.filename}}" class="w-70 image-thumbnail" alt="">
+                </a>
+            </div>
+            <div class="col">
+                
+            </div>
+        </div>
+       
+        {{/each}}
+    </div>
+</div>
+{{/if}}

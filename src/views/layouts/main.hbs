@@ -22,13 +22,22 @@
     </nav>
 
     <div class="container p-4">
+        
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-3">
+                {{> mygroups}}
+                {{> popular}} 
+                {{> comments}}                
+            </div>
+            <div class="col-md-6">
                 {{{ body }}}
             </div>
-            <div class="col-md-4">
-
+            <div class="col-md-3">
+                {{> groups}}
+                {{> stats}}
             </div>
+        </div>
+        <div class="row">
         </div>
     </div>
 <script
