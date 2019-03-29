@@ -39,7 +39,7 @@
     <div class="card-body">
        <div class="row">
             {{#each postPublications }}
-            {{#if (imageHelper filename) }}
+            {{#if (publicationHelper filename) }}
                 <div class="col-md-4">
                     <a href="/publications/{{uniqueId}}">
                         <img src="/public/upload/{{filename}}" alt="" width="100%" height="auto" class="img-thumbnail">
@@ -48,7 +48,7 @@
              {{else}}
              <div class="col-md-4">
                     <a href="/publications/{{uniqueId}}">
-                        <video width="300" height="200"  class="video-fluid z-depth-1" autoplay loop muted>
+                        <video width="200" height="auto"  class="video-fluid z-depth-1" autoplay loop muted>
                             <source src="/public/upload/{{filename}}" type="video/mp4">
                         </video>
                     </a>    
