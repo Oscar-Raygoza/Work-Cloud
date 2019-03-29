@@ -7,7 +7,7 @@ ctrl.index = async (req, res) =>{
     let viewModel = {
         publication: []
     }
-    viewModel.publication = postPublications;
+    viewModel.postPublications = postPublications;
     viewModel = await slidebar(viewModel); 
     console.log(viewModel)
     res.render('index',  viewModel )
