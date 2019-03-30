@@ -1,5 +1,4 @@
-// TODO: 
-$('#block-hidden').hide();
+    $('#block-hidden').hide();
 $('#btn-toggle-comment').click((e) =>{
     e.preventDefault();
     $('#block-hidden').slideToggle();
