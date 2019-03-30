@@ -34,6 +34,10 @@ $('#btn-delete').click(function(e){
             $('#btn-toggle-comment').hide();
         }).catch(err =>{
             console.log(err);
+            $(this).removeClass('btn-light').addClass('btn-success');
+            $(this).find('i').removeClass('fa-times').addClass('fa-check');
+            $(this).append('<spam>ok</spam>');
+            $('#btn-toggle-comment').hide();
         });
     }
 });
