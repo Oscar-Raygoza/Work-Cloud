@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
-const { Schema } = mongoose;
 
 const bcrypt = require('bcrypt-nodejs');
+
+const { Schema } = mongoose;
+
 
 
 const UsersSchema = new Schema({
@@ -19,7 +21,7 @@ const UsersSchema = new Schema({
 UsersSchema.methods.encryptPassword = (password)=>{
     return bcrypt.hashSync(password, bcrypt.genSaltSync(10))
 };
-UsersSchema.methods.unencryptPassword = (password)=>{
+UsersSchema.methods.unencryptPassword = function (password) {
     return bcrypt.compareSync(password, this.password);
 };
 
