@@ -12,9 +12,8 @@ body{
   height: auto;
 }
 
-.cd-main-header {
+html {
   font-size: 62.5%;
-  background-color: red;
 }
 .navbar-brand img{
     width: 30%;
