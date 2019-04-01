@@ -7,13 +7,13 @@ const { User } = require('../models');
 passport.serializeUser((user, done)=>{
     console.log("serializeUser: "+user)
     done(null, user.id);
-});
+})
 
 passport.deserializeUser(async (id, done)=>{
     const user = await User.findById(id);
     console.log("deserializeUser:"+user)
     done(null, user);
-});
+})
 
 passport.use('local-signup', new LocalStrategy({
     usernameField: 'email',
@@ -23,7 +23,7 @@ passport.use('local-signup', new LocalStrategy({
 async (req, email, password, done )=>{
     const emailExist =await User.findOne({email: email});
     console.log(emailExist);
-    
+
     if(!emailExist){
         const newUser =new User();
         newUser.email = email;
@@ -43,16 +43,16 @@ passport.use('local-signin', new LocalStrategy({
     passReqToCallback: true
 }, async (req, email, password, done)=>{
     const user =await User.findOne({email: email});
-    if(!user){
+    if(!await user){
         console.log('user not find 404');   
         return done(null, false, req.flash('signinMessage'),'El usuario o la contraseña son incorrectos');
     } 
-    if(!await user.unencryptPassword(password)){
+    else if(!user.unencryptPassword(password)){
         console.log('password user error!')   
         return done(null, false, req.flash('signinMessage'),'El usuario o la contraseña son incorrectos x2');        
+    }else{
+        console.log("TODO BIEN: "+user)
+        done(null, user);
     }
     
-    console.log("TODO BIEN: "+user)
-    done(null, user);
-
 }));
