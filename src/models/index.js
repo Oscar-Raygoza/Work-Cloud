@@ -1,4 +1,6 @@
 module.exports = {
     Publications: require('./publications'),
-    Comment: require('./comments')
+    Comment: require('./comments'),
+    User: require('./users'),
+
 }
