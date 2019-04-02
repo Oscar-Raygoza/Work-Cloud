@@ -1,7 +1,22 @@
-<form action="/signin" method="POST">
-    <input type="email" name="email" placeholder="email@g.com">
-    <input type="password" name="password" id="" placeholder="Password">
-    <button type="submit">
-        SignIn
-    </button>
-</form>
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <div class="card mt-4 text-center">
+            <div class="card-header">
+                <h3>Sign In</h3>
+            </div>
+            <div class="card-body">                
+                <form action="/signin" method="POST">
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="email@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" id="email" placeholder="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block mt-4">
+                        SignIn
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
