@@ -13,5 +13,8 @@ ctrl.index = async (req, res) =>{
     res.render('index',  viewModel )
 }
 
+ctrl.home = (req, res, next) =>{
+    res.render('home',{ title: 'home', layout: 'session' } );
+}
 
 module.exports = ctrl;
