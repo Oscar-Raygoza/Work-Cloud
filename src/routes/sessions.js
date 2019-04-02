@@ -31,4 +31,11 @@ module.exports = (app) =>{
         }
         res.redirect('/home')
     }
+
+    function isNotAuthenticated(req, res, next){
+        if(!req.isNotAuthenticated()){
+          return next();
+        }
+        res.redirect('/');
+    }
 };
