@@ -13,7 +13,7 @@ ctrl.signup = async (req, res, next) =>{
 
 
 ctrl.signin = async (req, res, next) =>{
-   res.render('signin');
+   res.render('signin', { title: 'signin', layout: 'session' });
 }
 
 
