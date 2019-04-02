@@ -1,7 +1,82 @@
-<form action="/signup" method="POST">
-    <input type="email" name="email" placeholder="email@g.com">
-    <input type="password" name="password" id="" placeholder="Password">
-    <button type="submit">
-        SignUp
-    </button>
-</form>
+<div class="row">
+    <div class="col-md-7 offset-md-4">
+        <div class="card mt-4 text-center">
+            <div class="card-header">
+                <h3>Registrarme</h3>
+            </div>
+            <div class="card-body">                
+                <form action="/signup" method="POST">
+                    <div class="form-group">
+                        <blockquote class="blockquote">
+                            <p class="mb-0 float-left">Name:</p>
+                            <footer class="blockquote-footer"></footer>
+                        </blockquote>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <blockquote class="blockquote">
+                            <p class="mb-0 float-left">Lastname:</p>
+                            <footer class="blockquote-footer"></footer>
+                        </blockquote>
+                        <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Your lastname">
+                    </div>
+                    <div class="form-group">
+                        <blockquote class="blockquote">
+                            <p class="mb-0 float-left">Email:</p>
+                            <footer class="blockquote-footer">example@example.com</footer>
+                        </blockquote>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="email@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <blockquote class="blockquote">
+                            <p class="mb-0 float-left">Password:</p>
+                            <footer class="blockquote-footer"></footer>
+                        </blockquote>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="password">
+                        <input type="password" class="form-control" name="password_confirm" id="password_confirm" placeholder="confirm password">
+                    </div>
+                    <div class="form-group">
+                        <blockquote class="blockquote">
+                            <p class="mb-0 float-left">Numero:</p>
+                            <footer class="blockquote-footer">Example- 4651353138</footer>
+                        </blockquote>
+                        <input type="text" class="form-control" name="number" id="number" placeholder="Your number">
+                    </div>
+                    <div class="form-group">
+                        <blockquote class="blockquote">
+                            <p class="mb-0 float-left">Sexo:</p>
+                        </blockquote>
+                           <div class="well well-sm text-center">                                
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-info active">
+                                        <input type="radio" name="sex" id="male" autocomplete="off" chacked>
+                                        <span class="fa fa-male"></span>
+                                    </label>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="sex" id="female" autocomplete="off">
+                                        <span class="fa fa-female"></span>
+                                    </label>
+		                        </div>
+	                        </div>
+                     </div>
+                     <div class="form-group">
+                         <blockquote class="blockquote">
+                            <p class="mb-0 float-left">Imagen de perfil:</p>
+                            <footer class="blockquote-footer">Selecciona tu imagen de perfil</footer>
+                        </blockquote>
+                        <div class="imput-group">
+                            <div class="custom-file">
+                                <input type="file" name="publication" id="inputGroup" aria-describedby="inputGroupFileAddon"
+                                    class="custom-file-input p-0" required>
+                                <label class="custom-file-label" for="inputGroupFile">imagen</label>
+                            </div>
+                        </div>
+                     </div>
+                    <button type="submit" class="btn btn-success btn-block mt-4 ">
+                        SignUp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
