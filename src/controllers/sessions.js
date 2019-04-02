@@ -8,7 +8,7 @@ ctrl.index = async (req, res) =>{
 }
 
 ctrl.signup = async (req, res, next) =>{
-   res.render('signup');
+   res.render('signup', { title: 'signup', layout: 'session' });
 }
 
 
@@ -18,7 +18,7 @@ ctrl.signin = async (req, res, next) =>{
 
 
 ctrl.profile = async (req, res, next) =>{
-   res.send('fs');
+   res.send('Login profile');
 }
 
 ctrl.notprofile = async (req, res, next) =>{
