@@ -27,7 +27,9 @@ async (req, email, password, done )=>{
     if(!emailExist){
         const newUser =new User();
         newUser.email = email;
-        newUser.password = newUser.encryptPassword(password);;
+        newUser.password = newUser.encryptPassword(password);
+        newUser.name = "M";
+        console.log(req);
         await newUser.save();
         console.log(newUser)
         done(null, newUser);
