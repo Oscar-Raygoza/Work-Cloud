@@ -14,7 +14,7 @@ ctrl.index = async (req, res) =>{
 }
 
 ctrl.home = (req, res, next) =>{
-    res.render('home',{ title: 'home', layout: 'session' } );
+    res.render('home',{ title: 'home', layout: 'home' } );
 }
 
 module.exports = ctrl;
