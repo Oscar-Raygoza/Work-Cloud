@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+     <!-- BOOTSTRAP 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- STYLE CSS -->	    
+	<link rel="stylesheet" href="/public/assets/css/style.css">
+    
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WorkCloud</title>
+</head>
+<body>
+	<header class="cd-main-header">
+		<a href="/" class="cd-logo">
+			<img class="logo-worwcloud" src="/public/assets/img/work-cloud-logo.svg" alt="Logo">
+		</a>
+		
+		<div class="cd-search is-hidden">
+			<form action="#0">
+				<input type="search" placeholder="Search...">
+			</form>
+		</div> <!-- cd-search -->
+
+		<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+
+		<nav class="cd-nav">
+			<ul class="cd-top-nav">
+				<li><a href="#0">Mis Grupos</a></li>
+				<li><a href="#0">Grupos</a></li>
+				<li><a href="#0">Soporte</a></li>
+				<li class="has-children account">
+					<a href="#0">
+						<img src="/public/assets/img/cd-avatar.png" alt="avatar">
+						OscarRaygoza
+					</a>
+					<ul>
+						<li><a href="#0">My Account</a></li>
+						<li><a href="#0">Edit Account</a></li>
+						<li><a href="#0">Logout</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header> <!-- .cd-main-header -->
+	</div>
+<body>
+    <div class="container p-4">
+        
+        <div class="row">
+            <div class="col-md-3">
+                {{> mygroups}}
+                             
+            </div>
+            <div class="mt-0 col-md-6">
+                {{{ body }}}
+            </div>
+            
+        </div>
+        <div class="row">
+        </div>
+
+    </div>
+	
+	<!-- JQUERY -->	
+	<script src="http://code.jquery.com/jquery-1.6.1.min.js"></script>
+
+  	<script src="/public/assets/js/home.js"></script>
+</body>
+</html>
