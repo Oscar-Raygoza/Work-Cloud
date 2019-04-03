@@ -1,6 +1,10 @@
 const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;;
+const LocalStrategy = require('passport-local').Strategy;
 const { User } = require('../models');
+const path = require('path')
+
+const { randomName }= require('../helpers/libs')
+const fs = require('fs-extra')
 
 passport.serializeUser((user, done)=>{
     console.log("serializeUser: "+user)
@@ -19,6 +23,7 @@ passport.use('local-signup', new LocalStrategy({
     passReqToCallback: true
 }, 
 async (req, email, password, done )=>{
+    console.log("entry in localsignup")
    
     if(req.body.password == req.body.password_confirm){    
         const emailExist =await User.findOne({email: email});
@@ -32,16 +37,51 @@ async (req, email, password, done )=>{
             newUser.number = req.body.number;
             newUser.sex = req.body.sex;
             newUser.nickname = req.body.nickname;
-            newUser.image_profile = req.body.lastname;
-            console.log(req);
-            await newUser.save();
-            console.log(newUser);
-            done(null, newUser);
+      
+            /* ------------- save img profile -------------*/
+            const saveFile = async ()=>{
+                console.log("entre al savefile()")
+                const fileUrl = randomName();
+                const filesRepet = await User.find({ image_profile: fileUrl });
+                if(filesRepet.length > 0){
+                    saveFile();
+                }
+                else{
+                    console.log(fileUrl); 
+                    const tempPath = req.file.path;
+        
+                    const ext = path.extname(req.file.originalname).toLowerCase();
+                    const targerPath = path.resolve(`src/public/upload/img_profile/${fileUrl}${ext}`);
+                
+                    if(ext === '.png' || ext === '.jpeg' 
+                    || ext === '.jpg' || ext === '.gif' ){
+                        await fs.rename(tempPath,targerPath);
+                
+                        
+                        newUser.image_profile  = fileUrl + ext,
+                          
+                        console.log(req);
+                        await newUser.save();
+                        console.log(newUser);
+                        done(null, newUser);
+
+                    }
+                    else{
+                        await fs.unlink(tempPath);
+                        res.status(500).json({ error: 'Only files images .jpg .png .gif'})
+                    }    
+                
+                }
+            };
+            
+            saveFile();
+        
+            /*/*/
         }else{
             return done(null, false, req.flash('signupMessage'),'Este email ya esta registrado')
         }
     }else{
-        console.log("")
+        console.log("Error password in not correct")
     }
 }));
 
