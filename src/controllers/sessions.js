@@ -16,11 +16,6 @@ ctrl.signin = async (req, res, next) =>{
    res.render('signin', { title: 'signin', layout: 'session' });
 }
 
-
-ctrl.profile = async (req, res, next) =>{
-   res.send('Login profile');
-}
-
 ctrl.notprofile = async (req, res, next) =>{
    res.send('FALSE')
 }
