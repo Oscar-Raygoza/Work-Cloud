@@ -5,7 +5,7 @@
                 <h3>Registrarme</h3>
             </div>
             <div class="card-body">                
-                <form action="/signup" method="POST">
+                <form action="/signup" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <blockquote class="blockquote">
                             <p class="mb-0 float-left">Name:</p>
@@ -44,6 +44,13 @@
                     </div>
                     <div class="form-group">
                         <blockquote class="blockquote">
+                            <p class="mb-0 float-left">NickNsme:</p>
+                            <footer class="blockquote-footer">Example- OscarRaygoza98</footer>
+                        </blockquote>
+                        <input type="text" class="form-control" name="nickname" id="nickname" placeholder="Your number">
+                    </div>
+                    <div class="form-group">
+                        <blockquote class="blockquote">
                             <p class="mb-0 float-left">Sexo:</p>
                         </blockquote>
                            <div class="well well-sm text-center">                                
@@ -66,8 +73,8 @@
                         </blockquote>
                         <div class="imput-group">
                             <div class="custom-file">
-                                <input type="file" name="publication" id="inputGroup" aria-describedby="inputGroupFileAddon"
-                                    class="custom-file-input p-0" required>
+                                <input type="file" name="image_profile" id="inputGroup" aria-describedby="inputGroupFileAddon"
+                                class="custom-file-input" required>
                                 <label class="custom-file-label" for="inputGroupFile">imagen</label>
                             </div>
                         </div>
