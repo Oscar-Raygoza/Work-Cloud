@@ -1,7 +1,5 @@
 const passport = require('passport');
-
 const LocalStrategy = require('passport-local').Strategy;;
-
 const { User } = require('../models');
 
 passport.serializeUser((user, done)=>{
@@ -21,22 +19,30 @@ passport.use('local-signup', new LocalStrategy({
     passReqToCallback: true
 }, 
 async (req, email, password, done )=>{
-    const emailExist =await User.findOne({email: email});
-    console.log(emailExist);
-
-    if(!emailExist){
-        const newUser =new User();
-        newUser.email = email;
-        newUser.password = newUser.encryptPassword(password);
-        newUser.name = "M";
-        console.log(req);
-        await newUser.save();
-        console.log(newUser)
-        done(null, newUser);
+   
+    if(req.body.password == req.body.password_confirm){    
+        const emailExist =await User.findOne({email: email});
+        console.log(emailExist);
+        if(!emailExist){
+            const newUser =new User();
+            newUser.name = req.body.name;
+            newUser.lastname = req.body.lastname;
+            newUser.email = email;
+            newUser.password = newUser.encryptPassword(password);
+            newUser.number = req.body.number;
+            newUser.sex = req.body.sex;
+            newUser.nickname = req.body.nickname;
+            newUser.image_profile = req.body.lastname;
+            console.log(req);
+            await newUser.save();
+            console.log(newUser);
+            done(null, newUser);
+        }else{
+            return done(null, false, req.flash('signupMessage'),'Este email ya esta registrado')
+        }
     }else{
-        return done(null, false, req.flash('signupMessage'),'Este email ya esta registrado')
+        console.log("")
     }
-
 }));
 
 passport.use('local-signin', new LocalStrategy({
