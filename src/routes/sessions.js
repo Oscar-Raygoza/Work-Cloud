@@ -1,21 +1,22 @@
 const Sessions = require('../controllers/sessions');
+const Profile = require('../controllers/profile');
 
 const passport = require('passport');
 
 module.exports = (app) =>{
     app.get('/login', Sessions.index);
-    app.get('/signup', Sessions.signup);       
+    app.get('/signup', Sessions.signup);
     app.get('/signin' , Sessions.signin);  
-    app.get('/profile' , isAuthenticated,Sessions.profile);  
+    app.get('/profile' , Profile.profile);  
 
     app.post('/signup',  passport.authenticate('local-signup', {
-        successRedirect: '/profile',
+        successRedirect: '/signin',
         failureRedirect: '/signup',
         passReqToCallback: true
     }));
-
+    
     app.post('/signin',  passport.authenticate('local-signin', {
-        successRedirect: '/profile',
+        successRedirect: `/profile`,
         failureRedirect: '/signin',
         passReqToCallback: true
     }));
