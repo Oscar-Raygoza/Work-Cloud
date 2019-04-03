@@ -12,7 +12,9 @@
 	<link rel="stylesheet" href="/public/assets/css/style.css">
     
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WorkCloud</title>
+    <title>
+		{{user.name}}
+	</title>
 </head>
 <body>
 	<header class="cd-main-header">
@@ -22,7 +24,7 @@
 		
 		<div class="cd-search is-hidden">
 			<form action="#0">
-				<input type="search" placeholder="Search...">
+				<input type="search" placeholder="buscar...">
 			</form>
 		</div> <!-- cd-search -->
 
@@ -35,11 +37,10 @@
 				<li><a href="#0">Soporte</a></li>
 				<li class="has-children account">
 					<a href="#0">
-						<img src="/public/assets/img/cd-avatar.png" alt="avatar">
-						OscarRaygoza
+						<img src="/public/upload/img_profile/{{user.image_profile}}" alt="avatar">
+						{{user.nickname}}
 					</a>
 					<ul>
-						<li><a href="#0">My Account</a></li>
 						<li><a href="#0">Edit Account</a></li>
 						<li><a href="#0">Logout</a></li>
 					</ul>

@@ -848,7 +848,7 @@ Sidebar
 
 
 .card-profile {
-  width: 500px;
+  width: 600px;
   margin: 0px auto;
   background-color: #e6e5e1;
   border-radius: 0;
@@ -861,9 +861,11 @@ Sidebar
   background-color: #30C29E;
 }
 .card-profile .card-img-profile {
-  max-width: 100%;
+  max-width: 300px;
+  max-height: 400px;
+  height: 200px;
   border-radius: 50%;
-  margin-top: -95px;
+  margin-top: -80px;
   margin-bottom: 35px;
   border: 5px solid #e6e5e1;
 }
