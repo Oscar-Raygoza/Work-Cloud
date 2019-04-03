@@ -1,5 +1,6 @@
-const mongoose = require('mongoose');
+const path = require('path')
 
+const mongoose = require('mongoose');
 const bcrypt = require('bcrypt-nodejs');
 
 const { Schema } = mongoose;
@@ -17,7 +18,10 @@ const UsersSchema = new Schema({
     password: { type: String },
     timestamp: { type: Date, default: Date.now }
 }); 
-
+UsersSchema.virtual('uniqueId')
+    .get(function(){
+        return this.image_profile.replace(path.extname(this.image_profile),'');
+    });
 UsersSchema.methods.encryptPassword = (password)=>{
     return bcrypt.hashSync(password, bcrypt.genSaltSync(10))
 };
