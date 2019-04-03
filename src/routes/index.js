@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const passport = require('passport');
 const home = require('../controllers/home');
+
 const publications = require('../controllers/publications');
 
 module.exports = app =>{
