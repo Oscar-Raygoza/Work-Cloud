@@ -1,4 +1,5 @@
 const Sessions = require('../controllers/sessions');
+
 const passport = require('passport');
 
 module.exports = (app) =>{
