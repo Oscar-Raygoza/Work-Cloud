@@ -7,7 +7,9 @@ module.exports = (app) =>{
     app.get('/login', Sessions.index);
     app.get('/signup', Sessions.signup);
     app.get('/signin' , Sessions.signin);  
-    app.get('/profile' , Profile.profile);  
+    app.get('/profile' , isAuthenticated,Profile.profile);  
+    app.get('/profile/:profile_id' , isAuthenticated,Profile.profileView);  
+
 
     app.post('/signup',  passport.authenticate('local-signup', {
         successRedirect: '/signin',
@@ -32,6 +34,13 @@ module.exports = (app) =>{
           return next();
         }
         res.redirect('/home')
+    }
+
+    function isAuthenticatedProfile(req, res, next){
+        if(req.isAuthenticated())
+            res.redirect('/home')      
+        else
+            res.redirect('/home')
     }
 
     function isNotAuthenticated(req, res, next){
