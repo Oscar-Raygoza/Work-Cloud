@@ -1,0 +1,46 @@
+<div class="row">
+    <div class="col-md-12 offset-md-2">
+        <div class="card mt-4 text-center">
+            <div class="card-header">
+                <h3>Create new group</h3>
+            </div>
+            <div class="card-body">
+                <form action="/newgroup" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <blockquote class="blockquote">
+                            <p class="mb-0 float-left">Name:</p>
+                            <footer class="blockquote-footer"></footer>
+                        </blockquote>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Your name">
+                    </div>
+                    <blockquote class="blockquote">
+                        <p class="mb-0 float-left">Description:</p>
+                        <footer class="blockquote-footer">Description on this group</footer>
+                    </blockquote>
+                    <div class="form-group">
+                        <textarea class="form-control" type='text' name='name'
+                            placeholder="{{publication.description}}"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <blockquote class="blockquote">
+                            <p class="mb-0 float-left">Imagen de perfil:</p>
+                            <footer class="blockquote-footer">Selecciona tu imagen de grupo</footer>
+                        </blockquote>
+
+                        <div class="form-group">
+                            <div class="imput-group">
+                                <div class="custom-file">
+                                    <input type="file" name="publication" id="inputGroup"
+                                        aria-describedby="inputGroupFileAddon" class="custom-file-input" required>
+                                    <label class="custom-file-label" for="inputGroupFile">Imgen group</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-block mt-4 ">
+                            Create group
+                        </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
