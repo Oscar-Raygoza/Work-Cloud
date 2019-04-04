@@ -8,6 +8,8 @@ const errorhandler = require('errorhandler');
 
 const routes = require('../routes/index');
 const routesSession = require('../routes/sessions');
+const groups = require('../routes/groups');
+
 
 /** Login */
 const flash = require('connect-flash');
@@ -59,6 +61,8 @@ module.exports = (app) =>{
     // routes
     routes(app,passport);
     routesSession(app, passport);
+    groups(app, passport);
+
     // static files
     app.use('/public', express.static(path.join(__dirname, '../public')));
     
