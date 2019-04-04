@@ -8,10 +8,15 @@ const CommentSchema = new Schema({
     timestanp: { type: Date, default: Date.now }
 });
 CommentSchema.virtual('publication')
-    .set(function(publication){
+    .set(function(publication, user){
+        this._user = user;
         this._publication = publication;
     })
     .get(function(){
-        return this._publication
+        const viewFk ={}
+        viewFk.idPublicationfk = this._publication;
+        viewFk.idUserfk = this._user; 
+        
+        return viewFk;
     })
 module.exports = model('Comment', CommentSchema)
