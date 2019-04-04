@@ -48,10 +48,10 @@
         <blockquote id="block-hidden">
             <form action="/publications/{{publication.uniqueId}}/comment" method="POST">
                 <div class="form-group">
-                    <input type="text" class="form-control transparent-textarea" name="name" placeholder="name" required disabled>
+                    <input type="text" class="form-control transparent-textarea" name="name" placeholder="{{user.name}}" required disabled>
                 </div>
                 <div class="form-group">
-                    <textarea name="description" id="" rows="2" class="form-control" placeholder="Tu comentario"
+                    <textarea name="comment" id="" rows="2" class="form-control" placeholder="Tu comentario"
                         required></textarea>
                 </div>
                 <div class="form-group">
@@ -67,12 +67,12 @@
                 <div class="row">
                     <a href="#" class="col text-center">
                         <!--IMAGE USER -->
-                        <img src="" alt="">
+                        <img  class="img-comment" src="/public/upload/img_profile/{{image_profile}}">
                     </a>
                     <blockquote class="col">
                         <p class="lead">{{comment}}</p>
                         <footer class="blockquote-footer">
-                            {{name}} - {{timeago timestanp}}
+                            <span>{{nickname}} - {{timeago timestanp}}</span>
                         </footer>
                     </blockquote>
                 </div>
