@@ -1,7 +1,7 @@
 const path = require('path')
 const { randomName }= require('../helpers/libs')
 const fs = require('fs-extra')
-const { Publications, Comment } = require('../models/index')
+const { Publications, Comment, User } = require('../models/index')
 
 const slidebar = require('../helpers/slidebar')
 
@@ -19,14 +19,43 @@ ctrl.index = async (req, res) =>{
         viewModel.publication = publication;
         await publication.save();
 
-        const comments = await Comment.find({ 
-            publication_id: publication._id
-        });
-        console.log(comments)
+        const comments = await Comment.aggregate([ 
+            // Join with user_info table 
+            { 
+             $lookup:{ 
+                  from: "users",  // other table name 
+                  localField: "user_id", // name of users table field 
+                  foreignField: "_id", // name of userinfo table field 
+                  as: "user_info"   // alias for userinfo table 
+                 }
+            }, 
+            { $unwind:"$user_info" },  // $unwind used for getting data in object or for one record only 
+            { 
+                $match:{ 
+                 $and:[{"publication_id" : publication._id}] 
+                } 
+               }, 
+            // define which fields are you want to fetch 
+            { 
+             $project:{ 
+              timestanp: "$timestanp",
+              comment: "$comment",
+              _id : "$user_info._id", 
+              email : "$user_info.email", 
+              name : "$user_info.name" , 
+              lastname : "$user_info.lastname", 
+              nickname : "$user_info.nickname",
+              image_profile: "$user_info.image_profile",
+             } 
+            } 
+        ]);
+        
+        
+       
         viewModel.comments = comments;
 
         viewModel = await slidebar(viewModel)
-
+        console.log('NEW COMMENT: ' + viewModel)
         res.render('publications', viewModel)
     }else{
         res.redirect('/');
@@ -97,11 +126,14 @@ ctrl.comment = async (req, res) =>{
     const Publication = await Publications.findOne({
         filename: {$regex: req.params.publications_id }
     });
+
     console.log(Publication);
     if(Publication){
         const newComment= new Comment(req.body);
         newComment.publication_id = Publication._id;
+        newComment.user_id = req.app.locals.user._id; // id de usuario logeado 
         await newComment.save();
+        
         res.redirect('/publications/' + Publication.uniqueId)
         console.log(newComment) 
     }else{
