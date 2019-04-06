@@ -110,13 +110,13 @@ ctrl.delete = async (req, res) =>{
     const Publication = await Publications.findOne({
         filename: {$regex: req.params.publications_id }
     });
+
     if(Publication){
         await fs.unlink(path.resolve('./src/public/upload/'+ Publication.filename))
         await Comment.deleteOne({
             publication_id: Publication._id
         });
         await Publication.remove();
-        res.redirect('/');
     }else{
         res.status(500).json({error: 'Internal server error'})
     }
