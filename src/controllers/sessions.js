@@ -1,7 +1,4 @@
 const ctrl = {};
-const { Publications } = require("../models/index")
-const Passport = require('passport');
-
 
 ctrl.index = async (req, res) =>{
    res.render('login');
