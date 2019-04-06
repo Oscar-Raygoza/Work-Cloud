@@ -14,4 +14,11 @@ helpers.publicationHelper = filename =>{
     return true
 }
 
+helpers.messagesHelper = () =>{
+    if(app.locals.signupMessage != [])
+        return app.locals.signupMessage
+        else
+        return false
+}
+
 module.exports = helpers;
