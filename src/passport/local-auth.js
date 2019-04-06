@@ -82,6 +82,7 @@ async (req, email, password, done )=>{
         }
     }else{
         console.log("Error password in not correct")
+        return done(null, false, req.flash('passwordConfirmErr'),'Las contraseñas no coinsiden')
     }
 }));
 
