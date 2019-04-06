@@ -1,43 +1,48 @@
-console.log("yugfyig");
-$('#block-hidden').hide();
-$('#btn-toggle-comment').click((e) =>{
-    e.preventDefault();
-    $('#block-hidden').slideToggle();
-})
+$(function() {
 
-$('#btn-like').click(function(e){
-    e.preventDefault();
-    const publicationId = $(this).data('id');
+    $('#block-hidden').hide();
 
-    $.post('/publications/'+ publicationId+'/like')
-        .done(data =>{
-            $('.likes-count').text(data.likes);
-        }).catch(err =>{
-            console.log(err);
-        })
-});
+    $('#btn-toggle-comment').click((e) =>{
+        e.preventDefault();
+        $('#block-hidden').slideToggle();
+    })
 
-$('#btn-delete').click(function(e){
-    e.preventDefault();
-    let publicationId = $(this).data('id');
-    let action = confirm('Estas seguro de querer eliminar esta publicacion?');
+    $('#btn-like').click(function(e){
+        e.preventDefault();
+        const publicationId = $(this).data('id');
 
-    if(action){
+        $.post('/publications/'+ publicationId+'/like')
+            .done(data =>{
+                $('.likes-count').text(data.likes);
+            }).catch(err =>{
+                console.log(err);
+            })
+    });
+
+    /*  DELETE PUBLICATION */
+    $('#btn-delete').click(function (e) {
+        e.preventDefault();
+        let $this = $(this);
+        const response = confirm('¿Estas seguro de querer eliminar esta publicacion?');
+        console.log(response);
+
+        if (response) {
+        console.log("entry in response");
+
+        let id = $(this).data('id');
         $.ajax({
-            url: '/publications/'+ publicationId,
+            url: '/publications/' + id,
             type: 'DELETE'
-        }).done(data =>{
-            alert(`Picture `);
-            $(this).removeClass('btn-light').addClass('btn-success');
-            $(this).find('i').removeClass('fa-times').addClass('fa-check');
-            $(this).append('<spam>ok</spam>');
-            $('#btn-toggle-comment').hide();
-        }).catch(err =>{
-            console.log(err);
-            $(this).removeClass('btn-light').addClass('btn-success');
-            $(this).find('i').removeClass('fa-times').addClass('fa-check');
-            $(this).append('<spam>ok</spam>');
-            $('#btn-toggle-comment').hide();
-        });
-    }
+        })
+            .done(function(result) {
+                console.log(
+                    "sad: "+result
+                );
+            $this.removeClass('btn-light').addClass('btn-success');
+            $this.find('i').removeClass('fa-times').addClass('fa-check');
+            $this.append('<span>Deleted!</span>');
+            });
+        }
+    });
+
 });
