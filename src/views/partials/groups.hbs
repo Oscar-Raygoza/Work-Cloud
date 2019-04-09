@@ -3,22 +3,14 @@
         <h5><i class="fa fa-user-friends p-2"></i>Nuevos Grupos</h5>
     </div>
 </div>
+{{#each slidebar.groups}}
 <div class="card btn-no-waves">
-  <img class="card-img-top" src="https://nareshit.com/wp-content/uploads/2018/08/angular-JS-online-training-nareshit.jpg" alt="Card image cap">
+  <img class="card-img-top" src="/public/upload/img_groups/{{image_group}}" alt="Card image cap">
 
   <div class="card-body">
-    <h5 class="card-title">AngularJS</h5>
-    <p class="card-text">AngularJS, es un framework de JavaScript de código abierto, mantenido por Google, que se utiliza para crear y mantener aplicaciones web de una sola página.</p>
-    <a href="https://mdbootstrap.com/education/bootstrap/quick-start/" target="_blank" class="stretched-link btn btn-primary">Unirme +</a>
+    <h5 class="card-title">{{name}}</h5>
+    <p class="card-text">{{description}}</p>
+    <a href="#" id="groupAdd" data-id="{{_id}}" target="_blank" class="stretched-link btn btn-primary">Unirme +</a>
   </div>
 </div>
-
-<div class="card btn-no-waves">
-  <img class="card-img-top" src="https://www.amarinfotech.com/wp-content/uploads/2017/05/github-1.jpg" alt="Card image cap">
-
-  <div class="card-body">
-    <h5 class="card-title">Git y GitHub</h5>
-    <p class="card-text">Aprende Git y GitHub de forma completa y desde cero. Con ejemplos prácticos. Sé un profesional del control de versiones.</p>
-    <a href="https://mdbootstrap.com/education/bootstrap/quick-start/" target="_blank" class="stretched-link btn btn-primary">Unirme +</a>
-  </div>
-</div>
+{{/each}}
