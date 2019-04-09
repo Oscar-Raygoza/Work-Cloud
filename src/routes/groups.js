@@ -6,7 +6,7 @@ const publications = require('../controllers/publications');
 
 module.exports = app =>{
 router.get('/groupnew', isAuthenticated,groups.index);
-
+router.post('/groupnew/create', isAuthenticated,groups.createGroup)
 
 function isAuthenticated(req, res, next){
     if(req.isAuthenticated()){
