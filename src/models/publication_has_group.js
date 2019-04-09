@@ -5,7 +5,7 @@ const publicatiom_has_groupSchema = new Schema({
     user_id: { type: ObjectId },
     group_id: { type: ObjectId },
 });
-CommentSchema.virtual('publication')
+publicatiom_has_groupSchema.virtual('publication')
     .set(function(publication , group){
         this._publication = publication;
         this._group = group;
